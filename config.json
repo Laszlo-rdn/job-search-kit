@@ -1,0 +1,66 @@
+{
+  "_lisezmoi": "Exemple : postes commerciaux juniors à Paris. Lance /setup dans Claude Code pour l'adapter à ta recherche, ou modifie à la main (voir README, section config.json).",
+
+  "experienceMaxAns": 2,
+
+  "filtreLieu": {
+    "motsCles": ["paris", "la defense", "boulogne*", "issy*", "levallois*", "neuilly*", "puteaux", "courbevoie", "clichy", "nanterre", "montrouge", "vanves", "malakoff", "saint-denis", "saint-ouen", "montreuil", "pantin", "aubervilliers", "vincennes", "ivry*", "charenton*", "gentilly", "arcueil", "rueil*", "suresnes", "sevres", "meudon", "chatillon", "antony", "bagnolet", "kremlin*", "villejuif", "asnieres*", "colombes", "saint-cloud", "saint-mande", "nogent*", "fontenay*", "clamart", "bagneux", "sceaux", "vitry*", "creteil", "maisons-alfort", "alfortville", "joinville*"],
+    "departements": ["75", "92", "93", "94"]
+  },
+
+  "intitulesExclus": ["senior", "sr", "head", "director", "directeur", "directrice", "lead", "vp", "chief", "principal", "stage", "stagiaire", "internship", "intern", "alternance", "alternant", "apprentissage", "apprenti", "freelance", "independant", "cdd", "sdr", "bdr", "sales development representative", "business development representative", "immobilier", "mandataire", "teleconseil*", "televente", "call center", "vendeur", "vendeuse", "boutique", "magasin"],
+
+  "intitulesRequis": ["sales", "vente*", "commerc*", "account", "business develop*", "bizdev", "customer", "client*", "csm", "key account", "grands comptes", "export", "negoci*", "charge d'affaires", "charge de compte*", "ingenieur commercial", "partner*", "revenue", "onboarding", "implementation", "adv", "administration des ventes", "graduate", "trainee", "vie", "v.i.e"],
+
+  "contratsExclus": ["CDD", "interim", "intérim", "stage", "alternance", "apprentissage", "freelance", "indépendant", "saisonnier"],
+
+  "linkedin": {
+    "lieu": "Paris, Île-de-France, France",
+    "maxParRecherche": 25,
+    "candidatsMax": 200,
+    "candidatsPalier": 100,
+    "tempsPleinSeulement": true,
+    "recherches": [
+      { "mots": "Account Executive junior", "max": 40 },
+      { "mots": "Customer Success Manager junior", "max": 40 },
+      { "mots": "Account Manager junior", "max": 40 },
+      { "mots": "jeune diplômé commercial", "max": 40 },
+      { "mots": "Customer Success Manager" },
+      { "mots": "Account Manager" },
+      { "mots": "Business Developer" },
+      { "mots": "Commercial Export" },
+      { "mots": "Chargé de clientèle B2B" },
+      { "mots": "Graduate Program", "max": 40, "sansExclusions": true, "toutContrat": true }
+    ]
+  },
+
+  "indeed": {
+    "pays": "fr",
+    "lieu": "Paris",
+    "jours": 7,
+    "maxParRecherche": 100,
+    "recherches": [
+      "account executive",
+      "account manager",
+      "customer success manager",
+      "business developer",
+      "commercial export",
+      "ingénieur commercial",
+      "chargé d'affaires",
+      "chargé de clientèle B2B",
+      "coordinateur commercial",
+      "commercial junior"
+    ]
+  },
+
+  "jobteaser": {
+    "maxParRequete": 300,
+    "langues": ["fr", "en"],
+    "requetes": [
+      { "type": "cdi", "lieu": "Paris" },
+      { "type": "cdi", "lieu": "Île-de-France" },
+      { "type": "graduate_program", "filtrerLieu": false },
+      { "type": "vie", "filtrerLieu": false }
+    ]
+  }
+}

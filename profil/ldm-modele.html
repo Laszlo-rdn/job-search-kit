@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+  Modèle de lettre de motivation en HTML, converti en PDF par : node scripts/cv-pdf.mjs <ldm.html> <sortie.pdf>
+  /setup remplit l'en-tête (nom, téléphone, email). L'agent de rédaction remplace seulement
+  %%DATE%%, %%ENTREPRISE%%, %%LIEU%%, %%OBJET%% et %%CORPS%% (un <p> par paragraphe).
+-->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Lettre de motivation</title>
+<style>
+  @page { size: A4; margin: 22mm 22mm; }
+  body { font-family: "Calibri", "Segoe UI", "Helvetica Neue", Arial, sans-serif; font-size: 11pt; line-height: 1.45; color: #222; margin: 0; }
+  .from { margin-bottom: 18px; }
+  .from b { font-size: 12pt; }
+  .to { text-align: right; margin-bottom: 22px; }
+  .subject { font-weight: 700; margin-bottom: 16px; }
+  .body p { margin: 0 0 10px; text-align: justify; }
+  .signature { margin-top: 18px; }
+</style>
+</head>
+<body>
+  <div class="from">
+    <b>Prénom NOM</b><br>
+    06 00 00 00 00<br>
+    email@exemple.com
+  </div>
+  <div class="to">
+    %%DATE%%<br>
+    <b>%%ENTREPRISE%%</b><br>
+    %%LIEU%%
+  </div>
+  <div class="subject">Objet : %%OBJET%%</div>
+  <div class="body">
+%%CORPS%%
+  </div>
+</body>
+</html>

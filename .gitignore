@@ -1,0 +1,17 @@
+# Secrets
+.env
+
+# Données personnelles : profil rempli, CV, candidatures
+profil/cv/*
+!profil/cv/.gitkeep
+profil/cv-base*.html
+candidatures/
+
+# État et sorties des scrapers (offres vues, résultats bruts)
+scripts/*/state.json
+scripts/*/out/
+
+# Divers
+node_modules/
+.DS_Store
+*.log

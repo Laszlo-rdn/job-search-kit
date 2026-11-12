@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+  Modèle de CV en HTML, converti en PDF par : node scripts/cv-pdf.mjs <cv.html> <sortie.pdf>
+  /setup copie ce modèle en profil/cv-base.html et y reporte le contenu de ton CV actuel.
+  Pour changer l'apparence (couleur, police, marges), modifie seulement le bloc <style> de cv-base.html.
+  Structure à garder : header, puis des <section> avec un <h2>, et des .entry (titre, lieu/dates, puces).
+-->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>CV</title>
+<style>
+  @page { size: A4; margin: 14mm 15mm; }
+  :root { --accent: #1f4e79; --text: #222; --muted: #555; }
+  * { box-sizing: border-box; }
+  body { font-family: "Calibri", "Segoe UI", "Helvetica Neue", Arial, sans-serif; font-size: 10.5pt; line-height: 1.35; color: var(--text); margin: 0; }
+  header { text-align: center; margin-bottom: 8px; }
+  header h1 { font-size: 20pt; margin: 0; letter-spacing: 0.5px; color: var(--accent); }
+  header .title { font-size: 11.5pt; font-weight: 600; margin-top: 2px; }
+  header .contact { color: var(--muted); font-size: 9.5pt; margin-top: 3px; }
+  .summary { margin: 6px 0 4px; text-align: justify; }
+  section { margin-top: 10px; }
+  h2 { font-size: 11pt; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); border-bottom: 1.2px solid var(--accent); padding-bottom: 2px; margin: 0 0 5px; }
+  .entry { margin-bottom: 6px; break-inside: avoid; }
+  .entry .head { display: flex; justify-content: space-between; gap: 10px; }
+  .entry .role { font-weight: 700; }
+  .entry .org { font-style: italic; }
+  .entry .meta { color: var(--muted); white-space: nowrap; font-size: 9.5pt; }
+  ul { margin: 2px 0 0 0; padding-left: 16px; }
+  li { margin: 1px 0; }
+  .skills p { margin: 2px 0; }
+  .skills b { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Prénom NOM</h1>
+  <div class="title">Titre visé (ex. Customer Success Manager junior)</div>
+  <div class="contact">Ville · 06 00 00 00 00 · email@exemple.com · linkedin.com/in/profil</div>
+</header>
+
+<p class="summary">Accroche de 2 lignes : qui tu es, ce que tu apportes, ce que tu cherches. C'est la partie la plus adaptée d'une offre à l'autre.</p>
+
+<section>
+  <h2>Expériences</h2>
+  <div class="entry">
+    <div class="head"><div><span class="role">Poste</span>, <span class="org">Entreprise</span></div><div class="meta">Ville · Mois AAAA à Mois AAAA</div></div>
+    <ul>
+      <li>Réalisation concrète, chiffrée si possible</li>
+      <li>Réalisation concrète</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Formation</h2>
+  <div class="entry">
+    <div class="head"><div><span class="role">Diplôme</span>, <span class="org">École</span></div><div class="meta">Ville · AAAA à AAAA</div></div>
+  </div>
+</section>
+
+<section class="skills">
+  <h2>Compétences</h2>
+  <p><b>Langues :</b> Français (natif), Anglais (C1)</p>
+  <p><b>Outils :</b> ...</p>
+</section>
+
+</body>
+</html>
