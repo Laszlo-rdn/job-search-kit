@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Kit de recherche d'emploi pour Claude Code : veille des offres LinkedIn, Indeed et JobTeaser via Apify, tri par un agent, puis rédaction des lettres de motivation et des messages de candidature. **Rien n'est jamais envoyé** : tout reste dans `candidatures/`, l'utilisateur postule lui-même.
+Kit de recherche d'emploi pour Claude Code : veille des offres LinkedIn, Indeed, JobTeaser, Welcome to the Jungle (via Apify) et Civiweb (API publique), tri par un agent, puis rédaction des lettres de motivation et des messages de candidature. **Rien n'est jamais envoyé** : tout reste dans `candidatures/`, l'utilisateur postule lui-même.
 
 ## Comment m'aider
 
@@ -17,6 +17,8 @@ Kit de recherche d'emploi pour Claude Code : veille des offres LinkedIn, Indeed 
 | `/linkedin` | Veille LinkedIn depuis le dernier run, 12 meilleures offres |
 | `/indeed` | Veille Indeed sur 7 jours, 12 à 20 offres |
 | `/jobteaser` | Veille JobTeaser depuis le dernier run, 20 offres max |
+| `/wttj` | Veille Welcome to the Jungle sur 7 jours, 20 offres max |
+| `/civiweb` | Veille des VIE / VIA Civiweb depuis le dernier run (gratuit, sans Apify) |
 
 Chaque commande s'arrête après le tri pour que l'utilisateur valide la liste avant la rédaction.
 

@@ -3,6 +3,8 @@
 
   "experienceMaxAns": 2,
 
+  "salaireMinAnnuel": 35000,
+
   "filtreLieu": {
     "motsCles": ["paris", "la defense", "boulogne*", "issy*", "levallois*", "neuilly*", "puteaux", "courbevoie", "clichy", "nanterre", "montrouge", "vanves", "malakoff", "saint-denis", "saint-ouen", "montreuil", "pantin", "aubervilliers", "vincennes", "ivry*", "charenton*", "gentilly", "arcueil", "rueil*", "suresnes", "sevres", "meudon", "chatillon", "antony", "bagnolet", "kremlin*", "villejuif", "asnieres*", "colombes", "saint-cloud", "saint-mande", "nogent*", "fontenay*", "clamart", "bagneux", "sceaux", "vitry*", "creteil", "maisons-alfort", "alfortville", "joinville*"],
     "departements": ["75", "92", "93", "94"]
@@ -51,6 +53,29 @@
       "coordinateur commercial",
       "commercial junior"
     ]
+  },
+
+  "wttj": {
+    "latitude": 48.8566,
+    "longitude": 2.3522,
+    "rayonKm": 15,
+    "jours": 7,
+    "maxParRecherche": 25,
+    "contrats": ["FULL_TIME"],
+    "recherches": [
+      "account executive",
+      "customer success",
+      "account manager",
+      "business developer",
+      "commercial export"
+    ]
+  },
+
+  "civiweb": {
+    "types": ["VIE", "VIA"],
+    "pays": [],
+    "paysExclus": [],
+    "dureeMinMois": 0
   },
 
   "jobteaser": {

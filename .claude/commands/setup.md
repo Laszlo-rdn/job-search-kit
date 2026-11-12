@@ -10,8 +10,9 @@
    - créer un compte gratuit sur https://console.apify.com (5 $ de crédit offerts chaque mois, largement suffisant) ;
    - copier le token dans Settings > API & Integrations ;
    - copier `.env.example` en `.env` et y coller le token.
-   Ne jamais afficher le token dans la conversation.
-3. `node scripts/credit.mjs` : si ça affiche le crédit, Apify est prêt.
+   Si `.env` n'existe pas, le créer toi-même en copiant `.env.example`, puis demander à l'utilisateur d'ouvrir `.env` (Bloc-notes) et de coller son token à la place de `apify_api_xxxxxxxxxxxxxxxx`. **Ne jamais lui demander de coller le token dans la conversation**, ni l'afficher.
+   S'il ne compte utiliser que `/civiweb`, Apify n'est pas nécessaire : passer à l'étape 2.
+3. `node scripts/credit.mjs` : si ça affiche le crédit, Apify est prêt. (Apify sert à LinkedIn, Indeed, JobTeaser et WTTJ. `/civiweb` n'en a pas besoin.)
 
 ## Étape 2 : le profil
 
@@ -43,6 +44,11 @@ Réécrire `config.json` pour SA recherche (mots-clés de son métier, sa ville,
 - `linkedin.lieu`, `linkedin.recherches` (mots-clés ; `"max": 40` pour les recherches prioritaires ; `"sansExclusions": true` pour ne pas appliquer `intitulesExclus` à une recherche, ex. Graduate Program).
 - `indeed.pays` (`fr`, `be`, `ch`...), `indeed.lieu`, `indeed.recherches`.
 - `jobteaser.requetes` : `type` parmi `cdi`, `graduate_program`, `vie` (d'autres types JobTeaser peuvent exister : tester), `lieu` facultatif, `"filtrerLieu": false` pour les offres à l'étranger.
+- `salaireMinAnnuel` : salaire annuel brut minimum (0 = pas de filtre). Appliqué seulement quand le salaire est affiché de façon structurée (WTTJ) ; ailleurs, c'est l'agent de tri qui juge.
+- `wttj` : `latitude` / `longitude` du centre de recherche (trouver les coordonnées de sa ville), `rayonKm`, `contrats` (`FULL_TIME` = CDI ; vide = tous), `recherches`.
+- `civiweb` : `types` (`VIE`, `VIA`), `pays` (vide = tous), `paysExclus`, `dureeMinMois`. Seulement si l'utilisateur vise un VIE ; sinon, lui dire qu'il peut ignorer `/civiweb`.
+
+Demander quelles plateformes il compte utiliser, et ne régler que celles-là.
 
 Garder 8 à 15 recherches par plateforme : chaque recherche coûte un peu de crédit Apify.
 

@@ -20,6 +20,12 @@
 - **Ce que je veux éviter :** [ex. prospection pure en poste permanent (SDR/BDR), porte-à-porte, ESN]
 - **Ce qui me motive :** [ex. cycle de vente complet, relation client, international]
 
+## VIE (seulement si tu utilises /civiweb)
+
+- **Numéro d'identifiant VIE :** [visible dans ton espace candidat Civiweb, ou laisse vide]
+- **Pays / zones préférés :** [ex. Espagne, Asie du Sud-Est ; ou « tous »]
+- **Conditions :** [confirme : moins de 29 ans au départ, nationalité d'un pays de l'EEE]
+
 ## Éliminatoires (l'offre est écartée si...)
 
 - Langue de travail exigée que je ne maîtrise pas : [ex. tout sauf français et anglais]
